@@ -1,6 +1,6 @@
 import random
 Hetfo_DE =[]
-
+lista =[]
 szek=0
 for szek in range(0,624,1) :
     i = random.randrange(0,2)
@@ -17,11 +17,21 @@ print (Hetfo_DE)
 with open("C:\git\PythonProject\Pproject.txt","w",encoding="utf-8") as kifile:
     kifile.writelines(Hetfo_DE)
 with open ("C:\git\PythonProject\Pproject.txt","r",encoding="utf-8") as befile:
-    for i in range:   
-        adat=sor.strip()
-        lista.append(adat)
+        lista=befile.readline()
+        
+print (lista)    
+print (lista)
+
+
+##print (Fdb)  
+##print (Udb)   
+
+
+
+        
+        
   
-print(foglalt)  
+
 
 
 
