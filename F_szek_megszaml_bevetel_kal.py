@@ -25,4 +25,5 @@ print(foglaltdb)
 def bevetel(ossz):
     return ossz * 12000
 
+
 print(bevetel(foglaltdb))
