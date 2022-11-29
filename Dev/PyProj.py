@@ -20,7 +20,7 @@ with open("C:\git\PythonProject\egynapfogl.txt","w",encoding="utf-8") as kifile:
     for eloadas in range(len(foglrendszer)):
         kifile.writelines(foglrendszer[eloadas])
 with open ("C:\git\PythonProject\egynapfogl.txt","r",encoding="utf-8") as befile:
-        szek = 625
+        
         for szek in range(len(befile):            
             befile.readlines(foglrendszer[eloadas])
 
