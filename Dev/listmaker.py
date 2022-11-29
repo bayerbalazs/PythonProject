@@ -6,7 +6,7 @@ szek= 0
 eloadas = 0
 for eloadas in range(0,64,1):
     
-    for szek in range(0,624,1):
+    for szek in range(0,625,1):
         i = 1
         if i == 0 :
             j = "F"
