@@ -4,7 +4,7 @@ foglrendszer=[]
 lista =[]
 szek= 0
 eloadas = 0
-for eloadas in range(0,64,1):
+for eloadas in range(0,63,1):
     
     for szek in range(0,625,1):
         i = 1
@@ -27,6 +27,6 @@ print(foglrendszer[0])
 print(foglrendszer[1])
 print(foglrendszer[20])
 with open("C:\git\PythonProject\Foglalas.txt","w",encoding="utf-8") as kifile:
-    for out in range(0,64,1):
+    for out in range(0,63,1):
         kifile.writelines(foglrendszer[out])
         print(out)
