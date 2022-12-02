@@ -8,6 +8,7 @@ termek=int(input("Kérlek add meg a foglalás termét.(1-3)"))
 eloadasok=int(input("Kérlek add meg a foglalás előadását.(1-3)"))
 sorok=int(input("Kérlek add meg a foglalás sorát.(1-25)"))
 szekek=int(input("Kérlek add meg a foglalás székét.(1-25)"))
+
 if kelltxt == "y":
     szek = 0
     eloadas = 0
@@ -61,10 +62,13 @@ def foglalszeket(nap,terem,eloadas,sor,szek):
             adat=sor.strip()
             foglalas.append(adat)  
      
-    if   foglalas[ea][hely] == "U":
-        foglalas[ea][hely]="F"
-        return True
-    elif foglalas[ea][hely] == "F":        
+    if   foglalas[ea][hely] == "U":        
+         foglalas[ea].insert(hely,"F")
+         return True
+
+    elif foglalas[ea][hely] == "F": 
         return False
     else:
         print("se F se U")
+
+foglalszeket(napok,termek,eloadasok,sorok,szekek)
