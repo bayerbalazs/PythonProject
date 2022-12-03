@@ -1,32 +1,17 @@
-import random
 foglrendszer=[]
-
 lista =[]
+eloadasok= 0
+szekek = 0 
+
+
 szek= 0
-eloadas = 0
-for eloadas in range(0,63,1):
-    
-    for szek in range(0,625,1):
-        i = 1
-        if i == 0 :
-            j = "F"
-        elif i == 1:
-            j = "U"
-        else:
-            print("valami error")              
-        lista.append(j) 
-    lista.append("\n")           
-    foglrendszer.append(lista)
-    lista=[]    
-print(eloadas,len(lista))
-    
-
-
-a = len(lista)
-print(foglrendszer[0])
-print(foglrendszer[1])
-print(foglrendszer[20])
+eloadas = 0                
 with open("C:\git\PythonProject\Foglalas.txt","w",encoding="utf-8") as kifile:
-    for out in range(0,63,1):
-        kifile.writelines(foglrendszer[out])
-        print(out)
+    for szek in range(0,625,1): 
+        kifile.write("0, ")                   
+                
+          
+        
+    
+
+
