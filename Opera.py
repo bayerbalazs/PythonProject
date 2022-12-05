@@ -136,22 +136,23 @@ sorok=int(input("Kérlek add meg a foglalás sorát.(1-25)"))
 szekek=int(input("Kérlek add meg a foglalás székét.(1-25)"))                  
                        
 
-def foglalszeket(nap,terem,eloadas,sor,szek):    
-    nap1=(int(nap)-1)*9
-    terem1=(int(terem)-1)*3
-    eloadas1=int(eloadas)-1
-    sor1=int(sor)-1
-    szek1=int(szek)-1
+def foglalszeket(nap1,terem1,eloadas1,sor1,szek1):    
+    nap1=(int(nap1)-1)*9
+    terem1=(int(terem1)-1)*3
+    eloadas1=int(eloadas1)-1
+    sor1=int(sor1)-1
+    szek1=int(szek1)-1
     hely=(sor1 * 25) + szek1
     ea=(nap1)+(eloadas1)+(terem1)
      
     if   eloadasok[ea][hely] == 0:        
          eloadasok[ea][hely] = 1
-         return print(f'A {sor1} sor {szek1} lefoglalásra került.')
+         return print(f'A {sor1} sor {szek1} széke lefoglalásra került, a nap száma:{napok} a terem száma:{terem1} az eloadas száma: {eloadas1} ')
+
 
     elif eloadasok[ea][hely] == 1: 
         return print(f'A {sor1} sor {szek1} már foglalt.')
     else:
         print("Hiba miatt a foglalás nem sikerült")
 
-foglalszeket(napok,termek,eloadasok,sorok,szekek)
+foglalszeket(napok,termek,eloadas,sorok,szekek)
