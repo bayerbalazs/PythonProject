@@ -136,7 +136,30 @@ sorok=int(input("Kérlek add meg a foglalás sorát.(1-25)"))
 szekek=int(input("Kérlek add meg a foglalás székét.(1-25)"))                  
                        
 
-def foglalszeket(nap1,terem1,eloadas1,sor1,szek1):    
+def foglalszeket(nap1,terem1,eloadas1,sor1,szek1): 
+    if nap1 == 0:
+        hetnapja = "Hétfő"
+    elif  nap1 == 1:
+        hetnapja = "Kedd"
+    elif  nap1 == 2:
+        hetnapja = "Szerda"
+    elif  nap1 == 3:
+        hetnapja = "Csütörtök"
+    elif  nap1 == 4:
+        hetnapja = "Péntek"
+    elif  nap1 == 5:
+        hetnapja = "Szombat"
+    elif  nap1 == 6:
+        hetnapja = "Vasárnap"
+    else:
+        hetnapja = "error van"
+
+    teremki = terem1
+    eloadaski = eloadas1
+    sorki= sor1
+    szekki = szek1
+
+
     nap1=(int(nap1)-1)*9
     terem1=(int(terem1)-1)*3
     eloadas1=int(eloadas1)-1
@@ -144,10 +167,12 @@ def foglalszeket(nap1,terem1,eloadas1,sor1,szek1):
     szek1=int(szek1)-1
     hely=(sor1 * 25) + szek1
     ea=(nap1)+(eloadas1)+(terem1)
+
+     
      
     if   eloadasok[ea][hely] == 0:        
          eloadasok[ea][hely] = 1
-         return print(f'A {sor1} sor {szek1} széke lefoglalásra került, a nap száma:{napok} a terem száma:{terem1} az eloadas száma: {eloadas1} ')
+         return print(f'A {sorki} sor {szekki} széke lefoglalásra került, a nap:{hetnapja} a terem száma:{teremki} az eloadas száma:{eloadaski} ')
 
 
     elif eloadasok[ea][hely] == 1: 
